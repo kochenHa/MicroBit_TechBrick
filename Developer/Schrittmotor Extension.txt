@@ -1,0 +1,41 @@
+Der folgende Code ist eine mögliche Lösung für einen Schrittmotor. Dieser wurde bisher noch nicht umgesetzt, weshalb der Block noch nicht in MakeCode verfügbar ist. Sollte dieser umgesetzt werden, kann der Code einfach in MakeCode mit implementiert werden.
+---------------------------------------
+
+
+    //SCHRITTMOTOR
+    export enum SchrittmotorAdresse {
+        //% block="Schrittmotor_1"
+        Schrittmotor1 = 0x0D,
+        //% block="Schrittmotor_2"
+        Schrittmotor2 = 0x1D,
+        //% block="Schrittmotor_3"
+        Schrittmotor3 = 0x2D,
+        //% block="Schrittmotor_4"
+        Schrittmotor4 = 0x3D,
+        //% block="Schrittmotor_5"
+        Schrittmotor5 = 0x4D,
+        //% block="Schrittmotor_6"
+        Schrittmotor6 = 0x5D,
+        //% block="Schrittmotor_7"
+        Schrittmotor7 = 0x6D,
+        //% block="Schrittmotor_8"
+        Schrittmotor8 = 0x7D,
+    }
+    //% block="Bewege %adresse mit %geschwindigkeit °/s um %positionsaenderung Grad"
+    //% group="Schrittmotor"
+    //% weight=99 blockGap=16
+    //% adresse.defl=SchrittmotorAdresse.Schrittmotor1
+    //% geschwindigkeit.min=0 geschwindigkeit.max=20
+    //% positionsaenderung.min=-180 positionsaenderung.max=180
+    export function schrittmotorbewegen(adresse: SchrittmotorAdresse, geschwindigkeit: number, positionsaenderung: number) {
+
+        // Buffer mit 2 Byte: [Geschwindigkeit, Positionsaenderung]
+        let buffer = pins.createBuffer(2)
+        buffer[0] = geschwindigkeit
+        buffer[1] = positionsaenderung
+
+        // Senden über I²C
+        pins.i2cWriteBuffer(adresse, buffer)
+    }
+    //SCHRITTMOTOR
+    

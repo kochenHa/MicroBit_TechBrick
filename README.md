@@ -6,7 +6,7 @@
 
 ## Projekt Überblick
 
-Das Ziel ist es ein kompatibles, mit verschiedenen Aktoren und Sensoren, die in der Microsoft MakeCode Umgebung nahtlos integriert sind und dort programmiert werden können. Die Hardware ist voll kompatibel mit Technik Klemmbausteinen und wird über USB Typ-C Kabel mit einem Control-Brick verbunden. Der Control-Brick beinhaltet den Microbit sowie eine Spannungsversorgung und die Anschlüsse um weitere Module anzuschließen.
+Das Ziel ist es ein kompatibles System, mit verschiedenen Aktoren und Sensoren, die in der Microsoft MakeCode Umgebung nahtlos integriert sind und dort programmiert werden können. Die Hardware ist voll kompatibel mit Technik Klemmbausteinen und wird über USB Typ-C Kabel mit einem Control-Brick verbunden. Der Control-Brick beinhaltet den Microbit sowie eine Spannungsversorgung und die Anschlüsse um weitere Module anzuschließen.
 
 Die Hardware kann mit einem 3D-Drucker, kommerziell erhältlichen Bauteilen und einer kleinen Portion Geschick selber gebaut werden. mehr dazu [hier](link)
 
